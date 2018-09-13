@@ -1,7 +1,7 @@
 #golang test repo
 
 ###Todo
-[ ] Hello World
+[x] Hello World
 [ ] install packages
 [ ] manage packages
 [ ] recieve GET request
