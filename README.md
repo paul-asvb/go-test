@@ -1,6 +1,6 @@
-#golang test repo
+# golang test repo
 
-###Todo
+## Todo
 - [x] Hello World
 - [ ] install packages
 - [ ] manage packages
