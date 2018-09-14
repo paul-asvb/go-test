@@ -6,5 +6,5 @@
 - [x] Hello World
 - [ ] install packages
 - [ ] manage packages
-- [ ] recieve GET request
+- [ ] receive GET request
 - [x] send GET request
