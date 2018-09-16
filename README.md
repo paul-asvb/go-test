@@ -16,3 +16,5 @@ go run hello-world.go
 - [x] send GET request
 - [ ] Init SQLite
 - [ ] Initial Watch with Autoreload
+- [ ] Checkout https://github.com/golang/dep
+- [ ] Use golang > 1.9 to use dep
