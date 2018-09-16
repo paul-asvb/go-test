@@ -18,3 +18,4 @@ go run hello-world.go
 - [ ] Initial Watch with Autoreload
 - [ ] Checkout https://github.com/golang/dep
 - [ ] Use golang > 1.9 to use dep
+- [ ] Use https://github.com/go-swagger/go-swagger
