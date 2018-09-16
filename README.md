@@ -1,6 +1,10 @@
 # golang test repo
 
+## Development
 
+```bash
+go run hello-world.go
+```
 
 ## Todo
 - [x] Hello World
@@ -11,3 +15,4 @@
 - [ ] parse JSON -> Go-Obj
 - [x] send GET request
 - [ ] Init SQLite
+- [ ] Initial Watch with Autoreload
