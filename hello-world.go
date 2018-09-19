@@ -9,12 +9,11 @@ import (
 )
 
 type request_query struct {
-    Id   int      `json:"page"`
-    Stringlist []string `json:"fruits"`
+    Id   int      `json:"id"`
+    Stringlist []string `json:"stringlist"`
 }
 
 func YourHandler(w http.ResponseWriter, r *http.Request) {
-
 
      res1D := &request_query{
                 Id:   1,
