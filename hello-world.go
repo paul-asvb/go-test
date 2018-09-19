@@ -5,22 +5,41 @@ import (
     "net/http"
     "log"
     "github.com/gorilla/mux"
+    "encoding/json"
 )
 
-func YourHandler(w http.ResponseWriter, r *http.Request) {
-    w.Write([]byte("Hello World!\n"))
+type request_query struct {
+    Id   int      `json:"page"`
+    Stringlist []string `json:"fruits"`
 }
+
+func YourHandler(w http.ResponseWriter, r *http.Request) {
+
+
+     res1D := &request_query{
+                Id:   1,
+                Stringlist: []string{"apple", "peach", "pear"}}
+
+            res1B, _ := json.Marshal(res1D)
+            fmt.Println(string(res1B))
+
+            fmt.Println("hello world")
+            resp, err := http.Get("http://example.com/")
+            if err != nil {
+            	// handle error
+            	fmt.Println(err)
+
+            }
+            fmt.Println(resp)
+
+
+    w.Write([]byte(res1B))
+}
+
 
 func main() {
 
-        fmt.Println("hello world")
-        resp, err := http.Get("http://example.com/")
-        if err != nil {
-        	// handle error
-        	fmt.Println(err)
 
-        }
-        fmt.Println(resp)
 
     r := mux.NewRouter()
     // Routes consist of a path and a handler function.

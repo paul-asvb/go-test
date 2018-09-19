@@ -11,8 +11,10 @@ go run hello-world.go
 - [x] install packages
 - [x] manage packages
 - [x] receive GET request
-- [ ] receive JSON
+- [x] receive JSON
+- [x] parse Go-Obj -> JSON
 - [ ] parse JSON -> Go-Obj
+- [x] send JSON
 - [x] send GET request
 - [ ] Init SQLite
 - [ ] Initial Watch with Autoreload
