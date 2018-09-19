@@ -14,22 +14,28 @@ type request_query struct {
 }
 
 func YourHandler(w http.ResponseWriter, r *http.Request) {
+    fmt.Println("hello world")
 
      res1D := &request_query{
                 Id:   1,
                 Stringlist: []string{"apple", "peach", "pear"}}
 
-            res1B, _ := json.Marshal(res1D)
-            fmt.Println(string(res1B))
+    res1B, _ := json.Marshal(res1D)
+    fmt.Println(string(res1B))
 
-            fmt.Println("hello world")
-            resp, err := http.Get("http://example.com/")
-            if err != nil {
-            	// handle error
-            	fmt.Println(err)
+    str := `{"id": 1, "stringlist": ["apple", "peach"]}`
+    res := request_query{}
 
-            }
-            fmt.Println(resp)
+    json.Unmarshal([]byte(str), &res)
+    fmt.Println(res)
+
+    resp, err := http.Get("http://example.com/")
+    if err != nil {
+        // handle error
+        fmt.Println(err)
+
+    }
+    fmt.Println(resp)
 
 
     w.Write([]byte(res1B))
