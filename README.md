@@ -13,7 +13,7 @@ go run hello-world.go
 - [x] receive GET request
 - [x] receive JSON
 - [x] parse Go-Obj -> JSON
-- [ ] parse JSON -> Go-Obj
+- [x] parse JSON -> Go-Obj
 - [x] send JSON
 - [x] send GET request
 - [ ] Init SQLite
