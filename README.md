@@ -2,10 +2,18 @@
 
 ## Development
 
+Run file
 ```bash
 go run hello-world.go
 ```
-
+Build to bin
+```bash
+go build hello-world.go
+```
+Format file
+```bash
+gofmt -w hello-world.go
+```
 ## Todo
 - [x] Hello World
 - [x] install packages
