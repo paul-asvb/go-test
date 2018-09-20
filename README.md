@@ -17,6 +17,7 @@ go run hello-world.go
 - [x] send JSON
 - [x] send GET request
 - [ ] Init SQLite
-- [ ] Initial Watch with Autoreload
+- [ ] Checkout different options for autorecompile
+- [ ] Initial Watch with Autoreload (gin)
 - [x] Init dep
 - [ ] Use https://github.com/go-swagger/go-swagger
