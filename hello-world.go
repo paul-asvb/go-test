@@ -3,9 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/gorilla/mux"
 	"github.com/gin-gonic/gin"
-	"log"
 	"net/http"
 )
 
@@ -14,7 +12,13 @@ type request_query struct {
 	Stringlist []string `json:"stringlist"`
 }
 
-func YourHandler(w http.ResponseWriter, r *http.Request) {
+func Pong(c *gin.Context) {
+	c.JSON(200, gin.H{
+		"message": "Pong",
+	})
+}
+
+func YourHandler(c *gin.Context) {
 	fmt.Println("hello world")
 
 	res1D := &request_query{
@@ -38,25 +42,17 @@ func YourHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	fmt.Println(resp)
 
-	w.Write([]byte(res1B))
+	c.JSON(200, res1B)
 }
-
 
 func main() {
 
-	r := mux.NewRouter()
-	// Routes consist of a path and a handler function.
-	r.HandleFunc("/", YourHandler)
+	router := gin.Default()
+	router.GET("/ping", Pong)
 
-
-	g := gin.Default()
-    	g.GET("/ping", func(c *gin.Context) {
-    		c.JSON(200, gin.H{
-    			"message": "pong",
-    		})
-    	})
-    	g.Run()
+	router.GET("/", YourHandler)
+	router.Run()
 
 	// Bind to a port and pass our router in
-	log.Fatal(http.ListenAndServe(":8000", r))
+	//log.Fatal(http.ListenAndServe(":8000", router))
 }
