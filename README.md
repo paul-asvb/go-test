@@ -20,8 +20,8 @@ gofmt -w hello-world.go
 - [x] manage packages
 - [x] receive GET request
 - [x] receive JSON
-- [x] parse Go-Obj -> JSON
-- [x] parse JSON -> Go-Obj
+- [ ] parsing in gin: Go-Obj -> JSON
+- [ ] parsing in gin: JSON -> Go-Obj
 - [x] send JSON
 - [x] send GET request
 - [ ] Init SQLite
