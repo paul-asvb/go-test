@@ -26,6 +26,5 @@ gofmt -w hello-world.go
 - [x] send GET request
 - [ ] Init SQLite
 - [ ] Checkout different options for autorecompile
-- [ ] Initial Watch with Autoreload (gin)
 - [x] Init dep
 - [ ] Use https://github.com/go-swagger/go-swagger

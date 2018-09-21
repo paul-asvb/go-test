@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/gorilla/mux"
+	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
 )
@@ -40,11 +41,21 @@ func YourHandler(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte(res1B))
 }
 
+
 func main() {
 
 	r := mux.NewRouter()
 	// Routes consist of a path and a handler function.
 	r.HandleFunc("/", YourHandler)
+
+
+	g := gin.Default()
+    	g.GET("/ping", func(c *gin.Context) {
+    		c.JSON(200, gin.H{
+    			"message": "pong",
+    		})
+    	})
+    	g.Run()
 
 	// Bind to a port and pass our router in
 	log.Fatal(http.ListenAndServe(":8000", r))
