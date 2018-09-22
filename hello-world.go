@@ -19,30 +19,32 @@ func Pong(c *gin.Context) {
 }
 
 func YourHandler(c *gin.Context) {
-	fmt.Println("hello world")
 
+	// new object
 	res1D := &request_query{
 		Id:         1,
 		Stringlist: []string{"apple", "peach", "pear"}}
 
+	// obj -> json
 	res1B, _ := json.Marshal(res1D)
 	fmt.Println(string(res1B))
 
+	// string -> obj
 	str := `{"id": 1, "stringlist": ["apple", "peach"]}`
 	res := request_query{}
 
 	json.Unmarshal([]byte(str), &res)
-	fmt.Println(res)
+	fmt.Println("Print res", 	res)
 
 	resp, err := http.Get("http://example.com/")
-	if err != nil {
-		// handle error
-		fmt.Println(err)
 
+	if err != nil {
+		fmt.Println(err)
 	}
+
 	fmt.Println(resp)
 
-	c.JSON(200, res1B)
+	c.JSON(200, res1D)
 }
 
 func main() {
