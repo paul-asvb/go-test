@@ -32,9 +32,9 @@ func YourHandler(c *gin.Context) {
 	// string -> obj
 	str := `{"id": 1, "stringlist": ["apple", "peach"]}`
 	res := request_query{}
-
 	json.Unmarshal([]byte(str), &res)
-	fmt.Println("Print res", 	res)
+
+	fmt.Println("Print res", res)
 
 	resp, err := http.Get("http://example.com/")
 
