@@ -36,7 +36,7 @@ goreload hello-world.go
 - [x] parsing in gin: JSON -> Go-Obj
 - [x] send JSON
 - [x] send GET request
-- [ ] Init SQLite
-- [ ] Checkout different options for autorecompile
+- [x] Init SQLite
+- [x] use goreload for autorecompile
 - [x] Init dep
 - [ ] Use https://github.com/go-swagger/go-swagger
