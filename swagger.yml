@@ -1,0 +1,12 @@
+consumes:
+- application/com.github.ASVBPREAUBV.go-test.v1+json
+info:
+  description: Test Swagger for go App
+  title: A Test application
+  version: 0.0.1
+paths: {}
+produces:
+- application/io.goswagger.examples.todo-list.v1+json
+schemes:
+- http
+swagger: "2.0"

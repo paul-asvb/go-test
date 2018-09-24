@@ -39,4 +39,4 @@ goreload hello-world.go
 - [x] Init SQLite
 - [x] use goreload for autorecompile
 - [x] Init dep
-- [ ] Use https://github.com/go-swagger/go-swagger
+- [x] Use swagger
