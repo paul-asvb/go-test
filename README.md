@@ -40,3 +40,4 @@ goreload hello-world.go
 - [x] use goreload for autorecompile
 - [x] Init dep
 - [x] Use swagger
+- [ ] Document 1st Endpoint
