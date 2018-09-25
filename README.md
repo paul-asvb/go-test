@@ -41,3 +41,5 @@ goreload hello-world.go
 - [x] Init dep
 - [x] Use swagger
 - [ ] Document 1st Endpoint
+- [ ] Use URL
+- [ ] Query tests
