@@ -41,4 +41,6 @@ goreload hello-world.go
 - [x] use goreload for autorecompile
 - [x] Init dep
 - [x] Use swagger
-- [ ] Document 1st Endpoind
+- [ ] Document 1st Endpoint
+- [ ] Use URL
+- [ ] Query tests
