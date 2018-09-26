@@ -6,14 +6,15 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	_ "github.com/mattn/go-sqlite3"
+	"log"
 	"net/http"
+	"os"
 	"strconv"
 )
 
 type request_query struct {
 	Id         int      `json:"id"`
 	Stringlist []string `json:"stringlist"`
-
 }
 
 func Pong(c *gin.Context) {
@@ -51,7 +52,7 @@ func YourHandler(c *gin.Context) {
 	c.JSON(200, res1D)
 }
 
-func main() {
+func TestSQLite() {
 
 	database, _ := sql.Open("sqlite3", "./test.db")
 	statement, _ := database.Prepare("CREATE TABLE IF NOT EXISTS people (id INTEGER PRIMARY KEY, firstname TEXT, lastname TEXT)")
@@ -66,6 +67,20 @@ func main() {
 		rows.Scan(&id, &firstname, &lastname)
 		fmt.Println(strconv.Itoa(id) + ": " + firstname + " " + lastname)
 	}
+}
+
+func main() {
+	TestSQLite()
+
+
+	fileContent, err := os.Open("./generated.json")
+	if err != nil {
+		log.Fatal(err)
+	}
+	parser := json.NewDecoder(fileContent)
+	if err = parser.Decode(nil); err != nil {
+		log.Fatal("parsing config file", err.Error())
+	}
 
 
 	router := gin.Default()
@@ -73,7 +88,6 @@ func main() {
 
 	router.GET("/", YourHandler)
 	router.Run()
-
 
 	// Bind to a port and pass our router in
 	//log.Fatal(http.ListenAndServe(":8000", router))
