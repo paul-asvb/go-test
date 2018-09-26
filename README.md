@@ -32,6 +32,7 @@ goreload hello-world.go
 - [x] manage packages
 - [x] receive GET request
 - [x] receive JSON
+- [x] parsing in go: JSON-File -> Go-Obj
 - [x] parsing in gin: Go-Obj -> JSON
 - [x] parsing in gin: JSON -> Go-Obj
 - [x] send JSON
@@ -40,4 +41,4 @@ goreload hello-world.go
 - [x] use goreload for autorecompile
 - [x] Init dep
 - [x] Use swagger
-- [ ] Document 1st Endpoint
+- [ ] Document 1st Endpoind
