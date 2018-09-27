@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	_ "github.com/mattn/go-sqlite3"
+	"io/ioutil"
 	"log"
 	"net/http"
-	"os"
 	"strconv"
 )
 
@@ -70,17 +70,23 @@ func TestSQLite() {
 }
 
 func main() {
-	TestSQLite()
+	//TestSQLite()
 
 
-	fileContent, err := os.Open("./generated.json")
+	fileContent, err := ioutil.ReadFile("./generated.json")
 	if err != nil {
 		log.Fatal(err)
 	}
-	parser := json.NewDecoder(fileContent)
+
+	res := GenericType{}
+	json.Unmarshal(fileContent, &res)
+
+	fmt.Println("Print res", res)
+
+	/*parser := json.NewDecoder([]byte fileContent)
 	if err = parser.Decode(nil); err != nil {
-		log.Fatal("parsing config file", err.Error())
-	}
+		log.Fatal(err)
+	}*/
 
 
 	router := gin.Default()
