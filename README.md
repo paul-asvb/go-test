@@ -41,6 +41,8 @@ goreload hello-world.go
 - [x] use goreload for autorecompile
 - [x] Init dep
 - [x] Use swagger
-- [ ] Document 1st Endpoint
+- [ ] Document 1st endpoint
 - [ ] Use URL
 - [ ] Query tests
+- [ ] Init JSON validation
+- [ ] Show JSON validation error with line:number
