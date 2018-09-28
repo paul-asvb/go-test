@@ -78,8 +78,12 @@ func main() {
 		log.Fatal(err)
 	}
 
+
 	res := GenericType{}
-	json.Unmarshal(fileContent, &res)
+	err2 := json.Unmarshal(fileContent, &res)
+	if err2 != nil {
+		fmt.Println("error:", err2)
+	}
 
 	fmt.Println("Print res", res)
 
