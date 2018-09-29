@@ -10,3 +10,18 @@ produces:
 schemes:
 - http
 swagger: "2.0"
+definitions:
+  item:
+    type: object
+    required:
+    - description
+    properties:
+      id:
+        type: integer
+        format: int64
+        readOnly: true
+      description:
+        type: string
+        minLength: 1
+      completed:
+        type: boolean
