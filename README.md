@@ -2,26 +2,28 @@
 
 ## Development
 
-Run file
+### Run file
 ```bash
 go run hello-world.go
 ```
-Build to bin
+
+### Build to bin
 ```bash
 go build hello-world.go
 ```
-Format file
+
+### Format file
 ```bash
 gofmt -w hello-world.go
 ```
 
-Auto recompile on filechange
+### Auto recompile on filechange
 1. Install goreload
 ```bash
 go get -u github.com/acoshift/goreload
 ```
 
-2. use goreload to run script
+git 2. use goreload to run script
 ```bash
 goreload hello-world.go
 ```
