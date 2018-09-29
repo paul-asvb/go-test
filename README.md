@@ -43,6 +43,8 @@ goreload hello-world.go
 - [x] use goreload for autorecompile
 - [x] Init dep
 - [x] Use swagger
+- [x] Server Swagger API Docs
+- [x] Generate golang-code from swagger.yaml
 - [ ] Document 1st endpoint
 - [ ] Use URL
 - [ ] Query tests
