@@ -50,3 +50,4 @@ goreload hello-world.go
 - [ ] Query tests
 - [ ] Init JSON validation
 - [ ] Show JSON validation error with line:number
+- [ ] generate Go structs: XSD -> Go-Code
