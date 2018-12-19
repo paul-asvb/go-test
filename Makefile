@@ -1,2 +1,2 @@
 dev:
-	cd src && goreload src/main.go
+	goreload hello-world.go
