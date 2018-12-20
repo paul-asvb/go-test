@@ -1,3 +1,10 @@
 {
-  "name": "zeit-go-test"
+  "name": "zeit-go-test",
+  "version": 1,
+  "builds": [
+    {
+      "src": "hello-world.go",
+      "use": "@now/go"
+    }
+  ]
 }
